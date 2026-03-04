@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4676056633151085552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4361382864610821519}
+  - component: {fileID: 8295241902716813511}
+  m_Layer: 0
+  m_Name: GameState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4361382864610821519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676056633151085552}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0123448, y: -1.9028227, z: -0.5178789}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8295241902716813511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676056633151085552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1abb10cc4fd40d2ace0bd51ed3fcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questions:
+  - questionText: "\u5927\u962A\u30AA\u30D5\u30A3\u30B9\u306E\u8FD1\u304F\u306B\u3042\u308B\u300C\u3046\u304A\u3063\u3057\u3085\u300D\u6B63\u3057\u3044\u30ED\u30B4\u306F\u3069\u3063\u3061\uFF1F"
+    leftImage: {fileID: 21300000, guid: c310228b8e0ed4f09ae72ef9cb8b6f79, type: 3}
+    rightImage: {fileID: 21300000, guid: 842b252f9ff934c90b92ba1945802099, type: 3}
+    leftText: 
+    rightText: 
+    correct: 1
+  - questionText: "Lit\u306E\u30AD\u30E3\u30E9\u3067\u3042\u308B\u30E1\u30A4\u306F\u3069\u3063\u3061\uFF1F"
+    leftImage: {fileID: 21300000, guid: 6c057c72b7c47488aabb758dabd30fc1, type: 3}
+    rightImage: {fileID: 21300000, guid: 50f9216c53c8b4f7e9911424971d4968, type: 3}
+    leftText: 
+    rightText: 
+    correct: 0
+  - questionText: "\u4ECA\u307E\u3067\u30AD\u30E3\u30F3\u30D7\u306E\u4E3B\u984C\u6B4C\u306B\u63A1\u7528\u3055\u308C\u305F\u3053\u3068\u306E\u306A\u3044\u6B4C\u624B\u3001\u3069\u3063\u3061\uFF1F"
+    leftImage: {fileID: 21300000, guid: 0b71e80b8ef1049d8b6207eaa9f01d51, type: 3}
+    rightImage: {fileID: 21300000, guid: 1d195bc99c2c64948ac90ba774487d96, type: 3}
+    leftText: Aimer
+    rightText: LISA
+    correct: 0
+  - questionText: "\u4ECA\u5E74\u306E\u95A2\u897F\u30E1\u30F3\u30BF\u30FC\u5927\u904B\u52D5\u4F1A\u306E\u512A\u52DD\u30C1\u30FC\u30E0\u306F\uFF1F"
+    leftImage: {fileID: 21300000, guid: b7490c0d50174419ba68f1a8c6e9b8fb, type: 3}
+    rightImage: {fileID: 21300000, guid: a1fe6d53bc4ff4b4aa54400b8671ff7f, type: 3}
+    leftText: "\u9EC4\u8272"
+    rightText: "\u8D64\u8272"
+    correct: 0
+  - questionText: "\u4ECA\u5E74\u306E\u9854\uFF0117\u671F\u306Eleaders\u66F2\u306F\uFF1F"
+    leftImage: {fileID: 21300000, guid: 04fce1d37b31b465cb2c7180b2854fea, type: 3}
+    rightImage: {fileID: 21300000, guid: 0df87ac3902c54954a387ae3fd8f7c27, type: 3}
+    leftText: "\u30A8\u30B4\u30A4\u30B9\u30C8"
+    rightText: "\u30E6\u30FC\u30C8\u30D4\u30A2"
+    correct: 0
+  - questionText: "\u30E1\u30F3\u30BF\u30FC\u30D0\u30A4\u30D6\u30EB\u300CSPECIAL\u300D\u306EE\u306F\uFF1F"
+    leftImage: {fileID: 0}
+    rightImage: {fileID: 0}
+    leftText: EGAO
+    rightText: EXPERT
+    correct: 0
+  - questionText: "\u95A2\u897F\u30E1\u30F3\u30BF\u30FC\u306B\u4E00\u756A\u4EBA\u6C17\u306E\u30AB\u30E1\u30E9\u30D6\u30E9\u30F3\u30C9\u3001\u3069\u3063\u3061\uFF1F"
+    leftImage: {fileID: 21300000, guid: 22eecd4fe22414e40ace0872b0be39ea, type: 3}
+    rightImage: {fileID: 21300000, guid: 6407480810afa4ab7bfbc083a8d81764, type: 3}
+    leftText: 
+    rightText: 
+    correct: 0
+  - questionText: "Lifeistech africa \u304C\u767A\u8DB3 \u3069\u3063\u3061\u306E\u56FD\uFF1F"
+    leftImage: {fileID: 21300000, guid: 50d64dff5325f41aa9660522ea58df43, type: 3}
+    rightImage: {fileID: 21300000, guid: 33cdc8711a38748cbbf28a4afa5812db, type: 3}
+    leftText: "\u30AC\u30FC\u30CA"
+    rightText: "\u30B1\u30CB\u30A2"
+    correct: 0
+  - questionText: "\u3055\u308F\u3063\u304F\u307E\u3055\u3093\u304C\u6301\u3063\u3066\u3044\u308B\u30AE\u30BF\u30FC\u306F\u3069\u3063\u3061\uFF1F"
+    leftImage: {fileID: 21300000, guid: 9e6896fd5971c413a802a6d43903358d, type: 3}
+    rightImage: {fileID: 21300000, guid: 2a310d40775894e23b6c164e5cc8bba1, type: 3}
+    leftText: 
+    rightText: 
+    correct: 0
+  - questionText: "\u73FE\u5728\u306ELit\u306E\u793E\u54E1\u6570\u306F\uFF1F\uFF1F\uFF1F"
+    leftImage: {fileID: 0}
+    rightImage: {fileID: 0}
+    leftText: "100\u4EBA\u4EE5\u4E0A150\u4EBA\u672A\u6E80"
+    rightText: "150\u4EBA\u4EE5\u4E0A200\u4EBA\u672A\u6E80"
+    correct: 1
+  defaultTimeLimit: 60
+  timeLeft: 0
+  accepting: 0
+  teamAlive: 0000000000000000
+  teamAnswers: 0000000000000000000000000000000000000000000000000000000000000000
+  teamScore: 0000000000000000000000000000000000000000000000000000000000000000
+  teamColors:
+  - {r: 0.49803922, g: 0.8509804, b: 0.44705883, a: 0}
+  - {r: 1, g: 0.50980395, b: 0.64705884, a: 0}
+  - {r: 1, g: 0.7647059, b: 0.4117647, a: 0}
+  - {r: 0.38039216, g: 0.5137255, b: 0.83137256, a: 0}
+  - {r: 0.3372549, g: 0.85882354, b: 0.972549, a: 0}
+  - {r: 1, g: 0.34901962, b: 0.40392157, a: 0}
+  - {r: 1, g: 0.89411765, b: 0.45882353, a: 0}
+  - {r: 0.7490196, g: 0.42352942, b: 0.78039217, a: 0}
+  questionIndex: 0
+  loopQuestions: 0
+  quizFinished: 0
+  runtimeLeftText: 
+  runtimeRightText: 
+  runtimeLeftImage: {fileID: 0}
+  runtimeRightImage: {fileID: 0}
+  runtimeCorrect: 0

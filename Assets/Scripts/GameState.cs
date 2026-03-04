@@ -11,7 +11,7 @@ public class GameState : MonoBehaviour
 {
     public static GameState I { get; private set; }
 
-    public const int TeamCount = 7;
+    public const int TeamCount = 8;
 
     [System.Serializable]
     public class QuestionData
@@ -47,7 +47,11 @@ public class GameState : MonoBehaviour
     [Header("Progress")]
     public int questionIndex = 0;
 
-    // ===== 追加：この「出題回」だけ使う表示用（左右ランダム結果） =====
+    [Header("Quiz End")]
+    public bool loopQuestions = false;  // falseなら最後で終了、trueならループ
+    public bool quizFinished = false;
+
+
     [Header("Runtime (auto)")]
     public string runtimeLeftText;
     public string runtimeRightText;
@@ -88,7 +92,6 @@ public class GameState : MonoBehaviour
         if (teamScore == null || teamScore.Length != TeamCount) teamScore = new int[TeamCount];
         if (teamColors == null || teamColors.Length != TeamCount) teamColors = new Color[TeamCount];
 
-        // デフォルト色（Inspectorで上書き推奨）
         if (teamColors[0] == default)
         {
             teamColors[0] = Color.red;
@@ -97,7 +100,8 @@ public class GameState : MonoBehaviour
             teamColors[3] = Color.yellow;
             teamColors[4] = Color.cyan;
             teamColors[5] = Color.magenta;
-            teamColors[6] = new Color(1f, 0.5f, 0f); // orange
+            teamColors[6] = new Color(1f, 0.5f, 0f); 
+            teamColors[7] = new Color(0f, 0f, 0f);
         }
     }
 
@@ -107,7 +111,6 @@ public class GameState : MonoBehaviour
         accepting = true;
         ResetAnswers();
 
-        // ★ここで毎回ランダムに左右を決定する
         PrepareRuntimeQuestion();
     }
 
@@ -185,13 +188,27 @@ public class GameState : MonoBehaviour
         }
     }
 
-    public void NextQuestion()
-    {
-        if (questions == null || questions.Length == 0) return;
+public void NextQuestion()
+{
+    if (questions == null || questions.Length == 0) return;
 
-        questionIndex++;
-        if (questionIndex >= questions.Length) questionIndex = 0;
+    if (questionIndex >= questions.Length - 1)
+    {
+        if (loopQuestions)
+        {
+            questionIndex = 0;
+        }
+        else
+        {
+            // もう次がない＝終了
+            FinishQuiz();
+        }
+        return;
     }
+
+    questionIndex++;
+}
+
 
     public void ResetAllTeamsAndScores()
     {
@@ -205,7 +222,18 @@ public class GameState : MonoBehaviour
         timeLeft = defaultTimeLimit;
         accepting = false;
 
-        // 初期表示用（念のため）
         PrepareRuntimeQuestion();
     }
+
+    public bool IsLastQuestion()
+{
+    if (questions == null || questions.Length == 0) return true;
+    return questionIndex >= questions.Length - 1;
+}
+
+public void FinishQuiz()
+{
+    quizFinished = true;
+}
+
 }

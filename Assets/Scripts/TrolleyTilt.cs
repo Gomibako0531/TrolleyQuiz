@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TrolleyTilt : MonoBehaviour
 {
-    [SerializeField] float tiltAngle = 30f;
+    [SerializeField] float tiltAngle = 10f;
 
     Quaternion baseRot;
 

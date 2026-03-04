@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BranchScene.unity
-    guid: 25eff2f94ba3e41e89a6ad17be4cc94d
-  - enabled: 1
-    path: Assets/Scenes/FailScene.unity
-    guid: cc19aea062a9549c8a0e733e65e8f70f
+    path: Assets/Scenes/TitleScene.unity
+    guid: 116d75d56e6064ac5baffa766bae850a
   - enabled: 1
     path: Assets/Scenes/RunScene.unity
     guid: f2513b588869049bc9e2dbbbe7bcd293
+  - enabled: 1
+    path: Assets/Scenes/SeparateScene.unity
+    guid: b44d738e1d66646a8956d14278b80b11
+  - enabled: 1
+    path: Assets/Scenes/BranchScene.unity
+    guid: 25eff2f94ba3e41e89a6ad17be4cc94d
+  - enabled: 1
+    path: Assets/Scenes/ResultScene.unity
+    guid: a4e17592710fc4c4a8ed8a61c20195f9
   m_configObjects: {}
